@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Asesmen Formatif Awal - Proses Komputasi</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #eef6fc;
+        margin: 0;
+        padding: 20px;
+        color: #2c3e50;
+    }
+    .container {
+        max-width: 700px;
+        background: white;
+        margin: auto;
+        padding: 25px 35px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        color: #2980b9;
+        margin-bottom: 10px;
+    }
+    p.description {
+        text-align: center;
+        font-style: italic;
+        color: #555;
+        margin-bottom: 30px;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px 0;
+        font-weight: 600;
+        color: #34495e;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: 1.5px solid #bdc3c7;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    .question {
+        background-color: #f9fbfe;
+        padding: 15px 20px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border-left: 6px solid #3498db;
+    }
+    .question p {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    label.answer-option {
+        cursor: pointer;
+        margin-bottom: 6px;
+        display: block;
+        font-weight: normal;
+        color: #2c3e50;
+        user-select: none;
+        transition: color 0.2s ease;
+    }
+    label.answer-option:hover {
+        color: #2980b9;
+    }
+    input[type="radio"] {
+        margin-right: 8px;
+        cursor: pointer;
+    }
+    button {
+        display: block;
+        width: 100%;
+        background-color: #2980b9;
+        border: none;
+        color: white;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #1c6397;
+    }
+    .result {
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #27ae60;
+        text-align: center;
+    }
+    .wrong {
+        color: #e74c3c;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Asesmen Formatif Awal</h2>
+    <p class="description">
+        Capaian Pembelajaran: Peserta didik mampu menerapkan proses komputasi yang dilakukan manusia secara mandiri atau berkelompok untuk mendapatkan data yang berkualitas dan menerapkan keterampilan berpikir komputasional untuk memecahkan masalah.
+    </p>
+
+    <form id="quizForm">
+        <label for="studentName">Nama Peserta Didik:</label>
+        <input type="text" id="studentName" name="studentName" placeholder="Masukkan nama lengkap" required />
+
+        <label for="studentClass">Kelas:</label>
+        <input type="text" id="studentClass" name="studentClass" placeholder="Masukkan kelas" required />
+
+        <div class="question">
+            <p>1. Apa yang dimaksud dengan proses komputasi dalam kehidupan sehari-hari?</p>
+            <label class="answer-option"><input type="radio" name="q1" value="b" /> Memproses dan mengelola data secara sistematis untuk mendapatkan informasi yang benar dan berguna</label>
+            <label class="answer-option"><input type="radio" name="q1" value="a" /> Menggunakan komputer untuk bermain game</label>
+            <label class="answer-option"><input type="radio" name="q1" value="c" /> Menyalakan dan mematikan komputer</label>
+            <label class="answer-option"><input type="radio" name="q1" value="d" /> Menggunakan internet tanpa tujuan jelas</label>
+        </div>
+
+        <div class="question">
+            <p>2. Manakah contoh kegiatan berpikir komputasional yang tepat untuk memecahkan masalah?</p>
+            <label class="answer-option"><input type="radio" name="q2" value="a" /> Membagi masalah menjadi bagian-bagian kecil</label>
+            <label class="answer-option"><input type="radio" name="q2" value="b" /> Mengabaikan data yang tidak lengkap</label>
+            <label class="answer-option"><input type="radio" name="q2" value="c" /> Menyalin jawaban dari teman</label>
+            <label class="answer-option"><input type="radio" name="q2" value="d" /> Menghindari penggunaan logika dalam menyelesaikan masalah</label>
+        </div>
+
+        <div class="question">
+            <p>3. Mengapa penting untuk mendapatkan data yang berkualitas dalam proses komputasi?</p>
+            <label class="answer-option"><input type="radio" name="q3" value="b" /> Agar hasil analisis dan keputusan yang diambil akurat dan dapat dipercaya</label>
+            <label class="answer-option"><input type="radio" name="q3" value="a" /> Agar data mudah disimpan</label>
+            <label class="answer-option"><input type="radio" name="q3" value="c" /> Agar data terlihat banyak</label>
+            <label class="answer-option"><input type="radio" name="q3" value="d" /> Agar cepat selesai</label>
+        </div>
+
+        <div class="question">
+            <p>4. Dalam suatu kelompok, proses komputasi dapat dilakukan secara:</p>
+            <label class="answer-option"><input type="radio" name="q4" value="c" /> Baik mandiri maupun berkelompok</label>
+            <label class="answer-option"><input type="radio" name="q4" value="a" /> Mandiri saja</label>
+            <label class="answer-option"><input type="radio" name="q4" value="b" /> Berkelompok saja</label>
+            <label class="answer-option"><input type="radio" name="q4" value="d" /> Tidak perlu dilakukan sama sekali</label>
+        </div>
+
+        <div class="question">
+            <p>5. Langkah pertama dalam berpikir komputasional adalah:</p>
+            <label class="answer-option"><input type="radio" name="q5" value="b" /> Memahami dan menganalisis masalah secara mendalam</label>
+            <label class="answer-option"><input type="radio" name="q5" value="a" /> Membuat solusi tanpa analisis masalah</label>
+            <label class="answer-option"><input type="radio" name="q5" value="c" /> Melompat ke penyelesaian masalah langsung</label>
+            <label class="answer-option"><input type="radio" name="q5" value="d" /> Menghindari pembagian masalah</label>
+        </div>
+
+        <div class="question">
+            <p>6. Salah satu contoh proses komputasi yang dilakukan manusia tanpa komputer adalah:</p>
+            <label class="answer-option"><input type="radio" name="q6" value="a" /> Mengurutkan data secara manual</label>
+            <label class="answer-option"><input type="radio" name="q6" value="b" /> Menggunakan software spreadsheet</label>
+            <label class="answer-option"><input type="radio" name="q6" value="c" /> Membuat program komputer</label>
+            <label class="answer-option"><input type="radio" name="q6" value="d" /> Menyalakan komputer</label>
+        </div>
+
+        <div class="question">
+            <p>7. Bagaimana cara terbaik memecahkan masalah yang kompleks dengan berpikir komputasional?</p>
+            <label class="answer-option"><input type="radio" name="q7" value="a" /> Menguraikan masalah menjadi bagian kecil (dekomposisi)</label>
+            <label class="answer-option"><input type="radio" name="q7" value="b" /> Mengabaikan masalah kecil</label>
+            <label class="answer-option"><input type="radio" name="q7" value="c" /> Menyelesaikan masalah besar secara langsung tanpa analisa</label>
+            <label class="answer-option"><input type="radio" name="q7" value="d" /> Mengandalkan keberuntungan</label>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit Jawaban & Export PDF</button>
+    </form>
+
+    <div id="result" class="result"></div>
+</div>
+
+<!-- jsPDF library CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    async function checkAnswers() {
+        const { jsPDF } = window.jspdf;
+
+        const answers = {
+            q1: 'b',
+            q2: 'a',
+            q3: 'b',
+            q4: 'c',
+            q5: 'b',
+            q6: 'a',
+            q7: 'a'
+        };
+
+        const total = Object.keys(answers).length;
+        let score = 0;
+        let unanswered = 0;
+
+        // Cek nama & kelas
+        const name = document.getElementById('studentName').value.trim();
+        const kelas = document.getElementById('studentClass').value.trim();
+
+        if (!name) {
+            alert('Mohon isi nama peserta didik terlebih dahulu.');
+            return;
+        }
+        if (!kelas) {
+            alert('Mohon isi kelas terlebih dahulu.');
+            return;
+        }
+
+        // Periksa jawaban
+        let userAnswers = {};
+        for (let q in answers) {
+            let radios = document.getElementsByName(q);
+            let answered = false;
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    answered = true;
+                    userAnswers[q] = radios[i].value;
+                    if (radios[i].value === answers[q]) {
+                        score++;
+                    }
+                }
+            }
+            if (!answered) {
+                unanswered++;
+            }
+        }
+
+        const resultDiv = document.getElementById('result');
+        if (unanswered > 0) {
+            resultDiv.innerHTML = `<span class="wrong">Tolong jawab semua pertanyaan terlebih dahulu. Masih ada ${unanswered} soal yang belum dijawab.</span>`;
+            return;
+        }
+
+        const percent = (score / total) * 100;
+
+        let feedback = '';
+        if (percent === 100) {
+            feedback = 'Luar biasa! Kamu sudah memahami konsep proses komputasi dan berpikir komputasional dengan sangat baik.';
+        } else if (percent >= 70) {
+            feedback = 'Bagus! Kamu sudah cukup memahami materi ini, tapi masih ada beberapa yang perlu diperhatikan.';
+        } else {
+            feedback = 'Perlu lebih banyak latihan untuk memahami konsep proses komputasi dan berpikir komputasional.';
+        }
+
+        resultDiv.innerHTML = `Skormu: ${score} dari ${total} (${percent.toFixed(2)}%)<br>${feedback}`;
+
+        // Generate PDF
+        const doc = new jsPDF();
+
+        doc.setFontSize(16);
+        doc.setTextColor("#2980b9");
+        doc.text("Asesmen Formatif Awal - Proses Komputasi", 14, 20);
+
+        doc.setFontSize(12);
+        doc.setTextColor("#2c3e50");
+        doc.text(`Nama: ${name}`, 14, 30);
+        doc.text(`Kelas: ${kelas}`, 14, 38);
+        doc.text(`Skor: ${score} dari ${total} (${percent.toFixed(2)}%)`, 14, 46);
+        doc.text(`Feedback:`, 14, 54);
+
+        // Feedback text bisa multiline
+        let splitFeedback = doc.splitTextToSize(feedback, 180);
+        doc.text(splitFeedback, 14, 62);
+
+        // Tambahkan jawaban siswa per soal
+        doc.setTextColor("#34495e");
+        doc.setFontSize(14);
+        doc.text("Jawaban Peserta Didik:", 14, 80);
+
+        doc.setFontSize(12);
+        let y = 88;
+        for (let i = 1; i <= total; i++) {
+            let userAns = userAnswers['q'+i];
+            let correctAns = answers['q'+i];
+            let isCorrect = userAns === correctAns ? "Benar" : "Salah";
+            doc.text(`${i}. Jawaban: ${userAns.toUpperCase()} (${isCorrect})`, 14, y);
+            y += 8;
+            if (y > 280) {
+                doc.addPage();
+                y = 20;
+            }
+        }
+
+        // Save PDF dengan nama file yang mudah dikenali
+        doc.save(`Asesmen_Proses_Komputasi_${name.replace(/\s+/g, '_')}.pdf`);
+    }
+</script>
+
+</body>
+</html>
